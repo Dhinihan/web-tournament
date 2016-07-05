@@ -14,3 +14,10 @@ api/db/*.sqlite3-journal
 # Ignore all logfiles and tempfiles.
 api/log/*.log
 api/tmp
+
+cli/logs/*
+node_modules/
+bower_components/
+tmp
+.DS_Store
+.idea
