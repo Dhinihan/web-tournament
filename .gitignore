@@ -18,6 +18,3 @@ api/tmp
 cli/logs/*
 node_modules/
 bower_components/
-tmp
-.DS_Store
-.idea
