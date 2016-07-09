@@ -57,6 +57,7 @@ GEM
     pg (0.18.4)
     polyglot (0.3.5)
     rack (1.5.5)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.0.2)
@@ -75,7 +76,7 @@ GEM
     rake (11.2.2)
     rdoc (4.2.2)
       json (~> 1.4)
-    rspec-core (3.5.0)
+    rspec-core (3.5.1)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -83,7 +84,7 @@ GEM
     rspec-mocks (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
-    rspec-rails (3.5.0)
+    rspec-rails (3.5.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -116,7 +117,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.50)
+    tzinfo (0.3.51)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
 
@@ -128,6 +129,7 @@ DEPENDENCIES
   factory_girl_rails
   jbuilder (~> 1.2)
   pg
+  rack-cors
   rails (= 4.0.2)
   rspec-rails
   sass-rails (~> 4.0.0)

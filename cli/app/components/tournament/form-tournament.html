@@ -1,0 +1,23 @@
+<form class="form-horizontal">
+  <div class="form-group form-group-lg">
+    <label for="tournament-name" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="tournament-name" placeholder="Tournament Name" 
+        ng-model="$ctrl.tournament.name">
+    </div>
+  </div>
+  <div class="form-group form-group-lg">
+    <label for="tournament-name" class="col-sm-2 control-label">Tipo</label>
+    <div class="col-sm-10">
+      <select-tournament-type ng-model="$ctrl.tournament.tournament_type"></select-tournament-type
+        ng-model="$ctrl.tournament.type">
+      <small> Others soon!</small>
+    </div>
+  </div>
+  <div class="form-group form-group-lg">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default btn-lg">Create</button>
+    </div>
+  </div>
+</form>
+{{$ctrl.tournament}}

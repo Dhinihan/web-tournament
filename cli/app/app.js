@@ -3,8 +3,8 @@
 // Declare app level module which depends on views, and components
 angular.module('wtApp', [
   'ngRoute',
-  'wtApp.view1',
-  'wtApp.view2',
+  'wtApp.home',
+  'wtApp.tournament',
   'wtApp.version',
   'wtApp.menu',
   'ngAnimate', 
@@ -12,5 +12,8 @@ angular.module('wtApp', [
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+  $routeProvider
+    .otherwise({redirectTo: '/home'});
+}])
+.constant('API_URL', 'http://localhost:3000/')
+;

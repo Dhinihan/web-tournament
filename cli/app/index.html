@@ -25,8 +25,6 @@
 
   <div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
-
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
@@ -37,13 +35,17 @@
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="home/home.js"></script>
+  <script src="tournament/tournament.js"></script>
   
-  <script src="components/menu/menu-directive.js"></script>
-  <script src="components/menu/menu-titulo-directive.js"></script>
-  <script src="components/menu/menu-toggle-button-directive.js"></script>
-  <script src="components/menu/menu-items-directive.js"></script>
+  <script src="components/menu/menu-component.js"></script>
+  <script src="components/menu/menu-titulo-component.js"></script>
+  <script src="components/menu/menu-toggle-button-component.js"></script>
+  <script src="components/menu/menu-items-component.js"></script>
+  
+  <script src="components/tournament/new-tournament-component.js"></script>
+  <script src="components/tournament/form-tournament-component.js"></script>
+  <script src="components/tournament/tournament-type/select-tournament-type-component.js"></script>
   
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>

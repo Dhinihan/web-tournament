@@ -9,3 +9,15 @@ body {
 .menu-titulo {
   margin-top: 20px;
 }
+
+.wt-placeholder {
+  color: #999;
+}
+
+.wt-placeholder option{
+  color: #000;
+}
+
+.wt-placeholder option:first-child{
+    color: #999;
+}
