@@ -2,25 +2,28 @@ var SelectTournamentTypeController = [
   '$scope', '$http', 'API_URL',
   function($scope, $http, API_URL) {
 
-  var ctrl = this;
+    var ctrl = this;
 
-  ctrl.$onInit = function() {
-    ctrl.updateModel = function(value) {
-      ctrl.ngModel.$setViewValue(value);
+    ctrl.$onInit = function() {
+      ctrl.updateModel = function(value) {
+        ctrl.ngModel.$setViewValue(value);
+      }
+
+      ctrl.updateValue = function() {
+        ctrl.typeModel = ctrl.ngModel.$viewValue;
+      }
+
+      ctrl.ngModel.$render = ctrl.updateValue;
     }
 
-    ctrl.updateValue = function () {
-      ctrl.typeModel = ctrl.ngModel.$viewValue;
-    }
+    $http.get(API_URL + 'tournament_types').then(function(response) {
+      ctrl.types = response.data
+    }).finally(function() {
+      ctrl.loaded();
+    });
 
-    ctrl.ngModel.$render = ctrl.updateValue;
   }
-
-  $http.get(API_URL + 'tournament_types').then(function(response){
-    ctrl.types = response.data
-  });
-
-}]
+]
 
 angular.module('wtApp.tournament.selectTournamentType', [])
 
@@ -32,6 +35,7 @@ angular.module('wtApp.tournament.selectTournamentType', [])
   controller: SelectTournamentTypeController,
   bindings: {
     create: '&onSelect',
+    loaded: '&onLoad',
     name: '@'
   }
 });

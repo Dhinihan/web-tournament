@@ -1,12 +1,21 @@
-function FormTournamentController($scope, $element, $attrs) {
+var FormTournamentController = [
+  '$http', '$scope', 'API_URL',
+  function($http, $scope, API_URL) {
 
   var ctrl = this;
 
   ctrl.send = function(tournament) {
-    $scope.$broadcast('show-errors-check-validity');
+
+    if ($scope.tournamentForm.$invalid) {
+      return;
+    }
+
+    $http.post(API_URL + 'tournaments', {
+      tournament: tournament
+    });
   }
 
-}
+}];
 
 angular.module('wtApp.tournament.formTournament', [
   'wtApp.tournament.selectTournamentType'

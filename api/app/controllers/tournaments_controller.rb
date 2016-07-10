@@ -12,7 +12,7 @@ class TournamentsController < ApplicationController
 
   private
 
-  def tournament_params 
+  def tournament_params
     params.require(:tournament).permit(:name, :tournament_type_id)
   end
 

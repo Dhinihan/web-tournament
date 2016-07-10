@@ -10,6 +10,7 @@ angular.module('wtApp', [
   'wtApp.form',
   'ngAnimate', 
   'ui.bootstrap',
+  'picardy.fontawesome',
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

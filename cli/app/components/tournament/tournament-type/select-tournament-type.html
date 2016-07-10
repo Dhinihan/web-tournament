@@ -3,9 +3,10 @@
   name="{{$ctrl.name || 'tournamentType'}}"
   placeholder="Tournament Type" 
   ng-class="{'wt-placeholder': !$ctrl.typeModel}"
-  ng-options="type.name for type in $ctrl.types track by type.id" 
+  ng-options="type.id as type.name for type in $ctrl.types" 
   ng-model="$ctrl.typeModel"
   ng-change="$ctrl.updateModel($ctrl.typeModel)"
+  dw-loading="fetching"
   required>
     
     <option value="" class="wt-placeholder" selected>Tournament Type</option>

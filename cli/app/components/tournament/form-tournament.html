@@ -1,6 +1,6 @@
 <form class="form-horizontal" ng-submit="$ctrl.send($ctrl.tournament)" name="tournamentForm"
   novalidate>
-  <div class="form-group form-group-lg" wt-has-error="name">
+  <div class="form-group form-group-lg has-feedback" wt-has-error="name">
     <label for="tournament-name" class="col-sm-2 control-label">Name</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" id="tournament-name" placeholder="Tournament Name"
@@ -8,13 +8,15 @@
       <wt-messages field="name" description="tournament name"></wt-messages>
     </div>
   </div>
-  <div class="form-group form-group-lg" wt-has-error="tournament_type">
+  <div class="form-group form-group-lg has-feedback" wt-has-error="tournament_type_id">
     <label for="tournament-name" class="col-sm-2 control-label">Tipo</label>
     <div class="col-sm-10">
-      <select-tournament-type ng-model="$ctrl.tournament.tournament_type" name="tournament_type"
-        required>
+      <select-tournament-type on-load="$ctrl.carregando = true" required name="tournament_type_id"
+        ng-model="$ctrl.tournament.tournament_type_id">
       </select-tournament-type>
-      <wt-messages field="tournament_type" description="tournament type"></wt-messages>
+      <fa name="spinner" class="form-control-feedback select-feedback fa-pulse" ng-hide="$ctrl.carregando"
+        spin></fa>
+      <wt-messages field="tournament_type_id" description="tournament type"></wt-messages>
       <small> Others soon!</small>
     </div>
   </div>
