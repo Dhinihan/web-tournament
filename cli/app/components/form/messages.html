@@ -1,0 +1,5 @@
+<div ng-if="$ctrl.form.$submitted || $ctrl.form[$ctrl.field].$touched">
+  <ng-messages for="$ctrl.form[$ctrl.field].$error" role="alert">
+    <ng-message when="required" class="control-label"> The {{$ctrl.description || $ctrl.field}} is required </ng-message>
+  </ng-messages>
+</div>
