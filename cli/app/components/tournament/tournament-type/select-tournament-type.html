@@ -1,6 +1,13 @@
-<select class="form-control" placeholder="Tournament Type" ng-class="{'wt-placeholder': !$ctrl.typeModel}"
-  ng-options="type.name for type in $ctrl.types track by type.id"
-  ng-model="$ctrl.typeModel" ng-change="$ctrl.updateModel($ctrl.typeModel)"
->
-<option value="" class="wt-placeholder" selected>Tournament Type</option>
+<select 
+  class="form-control" 
+  name="{{$ctrl.name || 'tournamentType'}}"
+  placeholder="Tournament Type" 
+  ng-class="{'wt-placeholder': !$ctrl.typeModel}"
+  ng-options="type.name for type in $ctrl.types track by type.id" 
+  ng-model="$ctrl.typeModel"
+  ng-change="$ctrl.updateModel($ctrl.typeModel)"
+  required>
+    
+    <option value="" class="wt-placeholder" selected>Tournament Type</option>
+
 </select>

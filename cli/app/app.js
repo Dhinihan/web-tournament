@@ -7,8 +7,9 @@ angular.module('wtApp', [
   'wtApp.tournament',
   'wtApp.version',
   'wtApp.menu',
+  'wtApp.form',
   'ngAnimate', 
-  'ui.bootstrap'
+  'ui.bootstrap',
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

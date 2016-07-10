@@ -30,7 +30,8 @@ angular.module('wtApp.tournament.selectTournamentType', [])
   },
   templateUrl: 'components/tournament/tournament-type/select-tournament-type.html',
   controller: SelectTournamentTypeController,
-  binding: {
-    create: '&onSelect'
+  bindings: {
+    create: '&onSelect',
+    name: '@'
   }
 });
