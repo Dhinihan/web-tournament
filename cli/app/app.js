@@ -4,6 +4,7 @@
 angular.module('wtApp', [
   'ngRoute',
   'wtApp.home',
+  'wtApp.player',
   'wtApp.tournament',
   'wtApp.version',
   'wtApp.menu',
@@ -11,6 +12,7 @@ angular.module('wtApp', [
   'ngAnimate', 
   'ui.bootstrap',
   'picardy.fontawesome',
+  'oitozero.ngSweetAlert',
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

@@ -1,0 +1,10 @@
+<form novalidate>
+  <div class="form-group">
+    <label for="player-input">
+      <fa name="user-plus"></fa>
+      Add Players Names
+    </label>
+    <textarea class="form-control" rows="1" id="player-input" ng-model="$ctrl.players"
+      ng-change="$ctrl.textUpdate($ctrl.players)" ng-trim="false"></textarea>
+  </div>
+</form>
