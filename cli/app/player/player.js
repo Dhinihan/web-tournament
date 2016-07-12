@@ -3,6 +3,7 @@
 angular.module('wtApp.player', [
   'ngRoute',
   'wtApp.player.input',
+  'wtApp.player.preview',
 ])
 
 .controller('PlayerCtrl', ['$scope', function($scope) {

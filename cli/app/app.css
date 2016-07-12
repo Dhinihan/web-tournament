@@ -1,28 +1,28 @@
 body {
-  background-color: #ffe
+    background-color: #ffe
 }
 
 .menu-text {
-  color: #ffe;
+    color: #ffe;
 }
 
 .menu-titulo {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .wt-placeholder {
-  color: #999;
-}
-
-.wt-placeholder option{
-  color: #000;
-}
-
-.wt-placeholder option:first-child{
     color: #999;
 }
 
-.has-feedback .select-feedback{
+.wt-placeholder option {
+    color: #000;
+}
+
+.wt-placeholder option:first-child {
+    color: #999;
+}
+
+.has-feedback .select-feedback {
     position: absolute;
     top: 3px;
     right: 30px;
@@ -33,10 +33,16 @@ body {
     text-align: center;
 }
 
-.form-horizontal .has-feedback .select-feedback{
-  right: 30px;
+.form-horizontal .has-feedback .select-feedback {
+    right: 30px;
 }
 
-.ng-hide.ng-hide-animate{
-     display: none !important;
+.ng-hide.ng-hide-animate {
+    display: none !important;
 }
+
+.player-preview-label {
+    margin-right: 10px;
+}
+
+style="margin-right: 10px;"

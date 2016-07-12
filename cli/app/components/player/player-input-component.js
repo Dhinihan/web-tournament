@@ -1,4 +1,4 @@
-var PlayerInputController = ['$location', function($location) {
+var PlayerInputController = [function() {
 
   var ctrl = this;
 
