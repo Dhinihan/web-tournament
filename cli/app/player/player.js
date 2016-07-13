@@ -6,12 +6,12 @@ angular.module('wtApp.player', [
   'wtApp.player.preview',
 ])
 
-.controller('PlayerCtrl', ['$scope', function($scope) {
+.controller('PlayerCtrl', ['$scope', 'avoidConflict', function($scope, avoidConflict) {
 
   $scope.players = [];
 
   $scope.addPlayer = function(name){
-    $scope.players.push(name)
+    avoidConflict.add($scope.players, name);
   }
 
 }])

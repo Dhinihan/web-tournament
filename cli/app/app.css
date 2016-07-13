@@ -42,7 +42,12 @@ body {
 }
 
 .player-preview-label {
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: 100%;
+    float: left;
 }
 
-style="margin-right: 10px;"
+.clickable {
+    cursor: pointer;
+}

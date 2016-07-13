@@ -1,4 +1,6 @@
-<h4>Jogadores</h4>
-<span ng-repeat="player in $ctrl.players" class="badge" style="margin-right: 5px; margin-top: 5px;">
-  {{player}}
-</span>
+<h4>Players:</h4>
+<div>
+  <span ng-repeat="player in $ctrl.players" class="label label-warning player-preview-label">
+    {{player}} <fa class="text-danger clickable" ng-click="$ctrl.remove($index)" name="times"></fa>
+  </span>
+</div>
