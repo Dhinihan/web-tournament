@@ -9,10 +9,10 @@
     </div>
   </div>
   <div class="form-group form-group-lg has-feedback" wt-has-error="tournament_type_id">
-    <label for="tournament-name" class="col-sm-2 control-label">Tipo</label>
+    <label for="tournament_type_id" class="col-sm-2 control-label">Type</label>
     <div class="col-sm-10">
-      <select-tournament-type on-load="$ctrl.carregando = true" required name="tournament_type_id"
-        ng-model="$ctrl.tournament.tournament_type_id">
+      <select-tournament-type on-load="$ctrl.carregando = true" name="tournament_type_id"
+        ng-model="$ctrl.tournament.tournament_type_id" select-id="tournament_type_id" required>
       </select-tournament-type>
       <fa name="spinner" class="form-control-feedback select-feedback fa-pulse" ng-hide="$ctrl.carregando"
         spin></fa>

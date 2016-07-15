@@ -1,6 +1,6 @@
 <h4>Players:</h4>
 <div>
   <span ng-repeat="player in $ctrl.players" class="label label-warning player-preview-label">
-    {{player}} <fa class="text-danger clickable" ng-click="$ctrl.remove($index)" name="times"></fa>
+    <span id="preview-{{$index}}">{{player}} <fa class="text-danger clickable" ng-click="$ctrl.remove($index)" name="times"></fa>
   </span>
 </div>

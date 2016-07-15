@@ -38,8 +38,12 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem "rspec-rails", :group => [:development, :test]
 
 group :development, :test do
   gem "factory_girl_rails"
+  gem "rspec-rails"
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem "poltergeist"
+  gem 'selenium-webdriver'
 end

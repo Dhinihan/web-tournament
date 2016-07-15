@@ -11,7 +11,7 @@ angular.module('wtApp.player', [
   $scope.players = [];
 
   $scope.addPlayer = function(name){
-    avoidConflict.add($scope.players, name);
+    avoidConflict.add($scope.players, name.trim());
   }
 
 }])

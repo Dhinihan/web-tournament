@@ -1,6 +1,7 @@
 <select 
   class="form-control" 
   name="{{$ctrl.name || 'tournamentType'}}"
+  id="{{$ctrl.selectId || 'tournamentType'}}"
   placeholder="Tournament Type" 
   ng-class="{'wt-placeholder': !$ctrl.typeModel}"
   ng-options="type.id as type.name for type in $ctrl.types" 

@@ -36,6 +36,7 @@ angular.module('wtApp.tournament.selectTournamentType', [])
   bindings: {
     create: '&onSelect',
     loaded: '&onLoad',
-    name: '@'
+    name: '@',
+    selectId: '@'
   }
 });
