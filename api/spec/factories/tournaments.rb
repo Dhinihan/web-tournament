@@ -7,6 +7,10 @@ FactoryGirl.define do
       name nil
     end
     
+    trait :with_id do 
+      id 1
+    end
+    
     trait :typeless do 
       tournament_type nil
     end

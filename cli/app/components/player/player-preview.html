@@ -1,6 +1,18 @@
-<h4>Players:</h4>
-<div>
-  <span ng-repeat="player in $ctrl.players" class="label label-warning player-preview-label">
-    <span id="preview-{{$index}}">{{player}} <fa class="text-danger clickable" ng-click="$ctrl.remove($index)" name="times"></fa>
-  </span>
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h4>Players:</h4>
+  </div>
+  <div class="panel-body">
+    <span ng-repeat="player in $ctrl.players" class="label label-default player-preview-label">
+      <span id="preview-{{$index}}" class="text-warning">
+        {{player}} 
+        <fa 
+          class="clickable text-danger" 
+          ng-click="$ctrl.remove($index)" 
+          name="times" 
+          id="remove-player-{{$index}}"
+        ></fa>
+      </span>
+    </span>
+  </div>
 </div>

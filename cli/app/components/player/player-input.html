@@ -7,4 +7,9 @@
     <textarea class="form-control" rows="1" id="player-input" ng-model="$ctrl.players"
       ng-change="$ctrl.textUpdate($ctrl.players)" ng-trim="false"></textarea>
   </div>
+  <div class="form-group">
+    <button class="btn btn-default" ng-click="$ctrl.save()">
+      <fa name="plus"></fa> Add
+    </button>
+  </div>
 </form>

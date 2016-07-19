@@ -45,6 +45,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    composite_primary_keys (6.0.6)
+      activerecord (~> 4.0.0)
     cucumber (2.4.0)
       builder (>= 2.1.2)
       cucumber-core (~> 1.5.0)
@@ -178,6 +180,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  composite_primary_keys
   cucumber-rails
   database_cleaner
   factory_girl_rails

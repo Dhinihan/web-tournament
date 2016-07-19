@@ -23,6 +23,14 @@ RSpec.describe Player, type: :model do
     expect(player).to be_valid
     expect(anonymous_player).not_to be_valid
   end
+  it "can be created with a tournament" do
+    tournament = create(:tournament);
+    player = Player.new({
+      name: 'Um nome',
+      tournaments: [tournament]
+    })
+    expect(player.save).to be_truthy
+  end
 
 
 end

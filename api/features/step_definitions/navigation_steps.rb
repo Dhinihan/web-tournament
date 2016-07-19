@@ -28,6 +28,10 @@ When(/^I take a picture$/) do
   save_screenshot('/home/vinicius/tmp/cucumber.png')
 end
 
+When(/^I click in css path "([^"]*)"$/) do |css|
+  page.find(:css,css).click
+end
+
 Then(/^I should see "([^"]*)"$/) do |content|
   expect(page).to have_content(content)
 end
@@ -35,3 +39,10 @@ end
 Then(/^I should see "([^"]*)" in css path "([^"]*)"$/) do |text, css|
   expect(page).to have_css(css, :text => text)
 end
+
+Then(/^the css path "([^"]*)" should not exists$/) do |css|
+  expect(page).not_to have_css(css)
+end
+
+
+

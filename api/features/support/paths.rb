@@ -9,3 +9,5 @@ After do |scenario|
     save_screenshot('/home/vinicius/tmp/cucumber.png')
   end
 end
+
+After { Capybara.reset_sessions! }
