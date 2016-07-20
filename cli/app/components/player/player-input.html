@@ -4,11 +4,11 @@
       <fa name="user-plus"></fa>
       Add Players Names
     </label>
-    <textarea class="form-control" rows="1" id="player-input" ng-model="$ctrl.players"
-      ng-change="$ctrl.textUpdate($ctrl.players)" ng-trim="false"></textarea>
+    <textarea class="form-control" rows="1" id="player-input" ng-model="$ctrl.player"
+      ng-change="$ctrl.textUpdate($ctrl.player)" ng-trim="false"></textarea>
   </div>
   <div class="form-group">
-    <button class="btn btn-default" ng-click="$ctrl.save()">
+    <button class="btn btn-default" ng-click="$ctrl.add($ctrl.player)">
       <fa name="plus"></fa> Add
     </button>
   </div>

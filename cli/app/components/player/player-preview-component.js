@@ -1,12 +1,15 @@
-var PlayerPreviewController = [function() {
+var PlayerPreviewController = [
 
-  var ctrl = this;
+  function () {
 
-  ctrl.remove = function(index) {
-    ctrl.players.splice(index, 1);
+    var ctrl = this;
+
+    ctrl.remove = function (index) {
+      ctrl.players.splice(index, 1);
+    }
+
   }
-
-}]
+]
 
 angular.module('wtApp.player.preview', [])
 
