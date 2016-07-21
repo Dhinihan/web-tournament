@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160705140711) do
+ActiveRecord::Schema.define(version: 20160721033306) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "matches", force: true do |t|
+    t.integer  "number"
+    t.string   "player_1_points"
+    t.string   "player_2_points"
+    t.integer  "round_id"
+    t.integer  "player_1_id"
+    t.integer  "player_2_id"
+    t.integer  "match_1_id"
+    t.integer  "match_2_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "matches", ["match_1_id"], name: "index_matches_on_match_1_id", using: :btree
+  add_index "matches", ["match_2_id"], name: "index_matches_on_match_2_id", using: :btree
+  add_index "matches", ["player_1_id"], name: "index_matches_on_player_1_id", using: :btree
+  add_index "matches", ["player_2_id"], name: "index_matches_on_player_2_id", using: :btree
+  add_index "matches", ["round_id"], name: "index_matches_on_round_id", using: :btree
 
   create_table "players", force: true do |t|
     t.string   "name",                   null: false
@@ -33,6 +52,15 @@ ActiveRecord::Schema.define(version: 20160705140711) do
   end
 
   add_index "registered_players", ["tournament_id", "player_id"], name: "index_registered_players_on_tournament_id_and_player_id", using: :btree
+
+  create_table "rounds", force: true do |t|
+    t.integer  "number"
+    t.integer  "tournament_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rounds", ["tournament_id"], name: "index_rounds_on_tournament_id", using: :btree
 
   create_table "tournament_types", force: true do |t|
     t.string   "name"

@@ -11,14 +11,14 @@ RSpec.describe PlayersController, type: :controller do
     it "Should create a collection of players and link then to a tournament" do
       allow(Tournament).to receive(:find).and_return(tournament)
       post :create, {
-        :players => {          
+        :players => {
           :collection => [
             "Vinicius",
             "Fernanda",
           ],
           :tournament_id => tournament.id
         },
-        :format => :json 
+        :format => :json
       }
       expect(response.content_type).to eq "application/json"
       expect(response.status).to eq 200

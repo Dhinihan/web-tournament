@@ -24,12 +24,23 @@ When(/^I press "([^"]*)"$/) do |button|
   click_button(button)
 end
 
-When(/^I take a picture$/) do 
+When(/^I take a picture$/) do
   save_screenshot('/home/vinicius/tmp/cucumber.png')
 end
 
 When(/^I click in css path "([^"]*)"$/) do |css|
   page.find(:css,css).click
+end
+
+When(/^I wait$/) do
+  sleep 1
+end
+
+When(/^I wait until I see "([^"]*)"$/) do |text|
+  wait = Selenium::WebDriver::Wait.new(:timeout => 1000)
+  wait.until do
+    page.has_content? text
+  end
 end
 
 Then(/^I should see "([^"]*)"$/) do |content|

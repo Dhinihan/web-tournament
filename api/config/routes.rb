@@ -57,5 +57,6 @@ WebTournament::Application.routes.draw do
   resources :tournaments
   resources :players
   resources :tournament_types
+  resources :rounds
 
 end

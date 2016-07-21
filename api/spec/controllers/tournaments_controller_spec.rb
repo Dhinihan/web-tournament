@@ -9,11 +9,11 @@ RSpec.describe TournamentsController, type: :controller do
   describe "POST new" do
     it "Should create new tournament with only type and name" do
       post :create, {
-        :tournament => {          
+        :tournament => {
           :name => "New Tournament",
           :tournament_type_id => tournament_type.id
         },
-        :format => :json 
+        :format => :json
       }
       expect(response.content_type).to eq "application/json"
       expect(response.status).to eq 200
@@ -22,10 +22,10 @@ RSpec.describe TournamentsController, type: :controller do
 
     it "Should not create new tournament without a name" do
       post :create, {
-        :tournament => {          
+        :tournament => {
           :tournament_type_id => tournament_type.id
         },
-        :format => :json 
+        :format => :json
       }
       expect(response.content_type).to eq "application/json"
       expect(response.status).to eq 422
@@ -34,10 +34,10 @@ RSpec.describe TournamentsController, type: :controller do
 
     it "Should not create new tournament without a type" do
       post :create, {
-        :tournament => {          
+        :tournament => {
           :name => "New Tournament",
         },
-        :format => :json 
+        :format => :json
       }
       expect(response.content_type).to eq "application/json"
       expect(response.status).to eq 422
