@@ -2,7 +2,7 @@ class PlayersController < ApplicationController
   protect_from_forgery with: :null_session
 
   def create
-    players = [}]
+    players = []
 
     players_names = player_params[:collection]
     tournament = Tournament.find(player_params[:tournament_id])
