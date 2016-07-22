@@ -1,7 +1,8 @@
 FactoryGirl.define do
   factory :player do
-    name 'Player 1'
-    trait :anonymous do 
+    sequence(:id) { |n| n }
+    sequence(:name) { |n| "Player #{n}" }
+    trait :anonymous do
       name nil
     end
   end

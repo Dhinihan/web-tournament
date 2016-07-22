@@ -17,10 +17,12 @@ FactoryGirl.define do
 
     trait :with_players do
       transient do
-        players_count 5
+        players_count 4
       end
       after(:build) do |tournament, evaluator|
-        tournament.players = build_list(:player, evaluator.players_count, tournaments: [tournament])
+        tournament.players = build_list(:player, evaluator.players_count, {
+          tournaments: [tournament]
+        })
       end
     end
 
@@ -29,7 +31,7 @@ FactoryGirl.define do
         round_count 1
       end
       after(:build) do |tournament, evaluator|
-        tournament.rounds = build_list(:round, evaluator.round_count, tournaments: [tournament])
+        tournament.rounds = build_list(:round, evaluator.round_count, tournament: tournament)
       end
     end
   end

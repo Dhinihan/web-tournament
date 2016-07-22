@@ -14,7 +14,7 @@ RSpec.describe RoundsController, type: :controller do
       expect(response.status).to eq 200
       json_body = JSON(response.body)
       expect(json_body).to be_kind_of(Array)
-      expect(json_body[0][:tournament_id]).to eq(tournament.id)
+      expect(json_body[0]["tournament_id"]).to eq(tournament.id)
     end
 
 end

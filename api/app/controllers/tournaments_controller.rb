@@ -3,7 +3,7 @@ class TournamentsController < ApplicationController
 
   def create
     @tournament = Tournament.new(tournament_params)
-    if @tournament.save 
+    if @tournament.save
       render :json => @tournament
     else
       render :json => @tournament.errors, :status => 422
